@@ -30,7 +30,7 @@
         app:srcCompat="@drawable/padrao" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageResultado"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginTop="32dp"
@@ -45,37 +45,43 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        android:onClick="selecionadoPapel"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/papel" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:srcCompat="@drawable/papel"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        android:onClick="selecionadoPedra"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/pedra" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:srcCompat="@drawable/pedra"
+        tools:ignore="ImageContrastCheck,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        android:onClick="selecionadoTesoura"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/tesoura" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultado"
+        app:srcCompat="@drawable/tesoura"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -84,5 +90,6 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageResultado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
