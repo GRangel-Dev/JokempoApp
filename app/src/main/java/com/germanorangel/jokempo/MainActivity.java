@@ -27,17 +27,21 @@ public class MainActivity extends AppCompatActivity {
         this.opcaoSelecionada("tesoura");
     }
 
+    int you = 0;
+    int AI = 0;
+
     public void opcaoSelecionada(String escolhaUsuario) {
 
         ImageView imageResultado = findViewById(R.id.imageResultado);
         TextView textoResultado = findViewById(R.id.textResultado);
+        TextView textoSomatorio = findViewById(R.id.textSomatorio);
 
 
         int numero = new Random().nextInt(3);
         String[] opcoes = {"papel", "pedra", "tesoura"};
         String escolhaApp = opcoes[numero];
 
-        switch (escolhaApp) {
+       switch (escolhaApp) {
             case "papel":
                 imageResultado.setImageResource(R.drawable.papel);
                 break;
@@ -55,15 +59,18 @@ public class MainActivity extends AppCompatActivity {
                             (escolhaApp == "pedra" && escolhaUsuario == "tesoura")
             ) {
                 textoResultado.setText("Você perdeu!");
+                AI ++;
             } else if (
                     (escolhaUsuario == "tesoura" && escolhaApp == "papel") ||
                             (escolhaUsuario == "papel" && escolhaApp == "pedra") ||
                             (escolhaUsuario == "pedra" && escolhaApp == "tesoura")
             ) { // usuario ganha
                 textoResultado.setText("Você GANHOU!");
-            } else {
+                you ++;
+           } else {
                 textoResultado.setText("Empate!");
             } // empate
-        
+            textoSomatorio.setText("Você: " + you + " X " + "CPD: " + AI);
+
         }
     }
